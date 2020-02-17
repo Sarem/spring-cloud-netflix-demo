@@ -7,15 +7,23 @@ server:
 spring:
   application:
     name: webflix-streaming-service
-
   thymeleaf:
     cache: false
   webflux:
     static-path-pattern: /**
+  security:
+    oauth2:
+      client:
+        provider:
+          keycloak:
+            issuer-uri: http://localhost:8080/auth/realms/demo
+        registration:
+          keycloak:
+            client-id: streamer
+resource-uri: http://localhost:9086/video/*
 logging:
   level:
     org.springframework: info
-
 management:
   endpoints:
     web:
