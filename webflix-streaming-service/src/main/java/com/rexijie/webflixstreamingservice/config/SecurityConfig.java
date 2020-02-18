@@ -22,8 +22,9 @@ public class SecurityConfig {
                                 .anyExchange().authenticated()
                 )
                 .oauth2Login(withDefaults())
-                .formLogin(withDefaults())
-                .oauth2Client(withDefaults());
+//                .formLogin(withDefaults())
+//                .oauth2Client(withDefaults())
+        ;
         return http.build();
     }
 

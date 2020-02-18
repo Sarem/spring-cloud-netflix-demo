@@ -27,12 +27,12 @@ spring:
         - Path=/webflix-streaming-service/**
         filters:
         - StripPrefix=1
-      - id: login
-        uri: http://localhost:8080/oauth2/authorization/keycloak
-        predicates:
-          - Path=/login/**
-        filters:
-          - StripPrefix=1
+#      - id: login
+#        uri: http://localhost:8080/oauth2/authorization/keycloak
+#        predicates:
+#          - Path=//oauth2/authorization/keycloak/**
+#        filters:
+#          - StripPrefix=1
 eureka:
   client:
     healthcheck:
